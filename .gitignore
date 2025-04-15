@@ -1,2 +1,4 @@
 /input.sql
 /dados_limpos.json
+/bulk_data.ndjson
+/bulk_data_insert.ndjson
