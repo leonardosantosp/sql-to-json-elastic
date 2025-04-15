@@ -89,13 +89,11 @@ def main():
 
     with open(input_sql, "r", encoding="utf-8") as f:
         for line in f:
-            # detecta qualquer início de INSERT, mesmo se não for no início da linha
             if not inside_insert and "INSERT INTO `tb_content` VALUES" in line:
                 buffer = line
                 inside_insert = True
             elif inside_insert:
                 buffer += line
-                # fim do bloco de insert
                 if line.strip().endswith(");") or line.strip().endswith(");--") or ";" in line:
                     try:
                         raw_data = buffer.split("VALUES", 1)[1].strip()
