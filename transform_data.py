@@ -1,3 +1,5 @@
+# Esse código extrai os dados de uma base de dados em grande escala do sql, e faz uma limpeza através de expressões regulares
+
 import re
 import json
 

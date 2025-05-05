@@ -1,3 +1,6 @@
+# Rodar: jq -c '.[]' seu_arquivo.json > seu_arquivo.ndjson 
+# Esse código basicamente insere um indice em cada linha do json para que seja inserido corretamente no elastic
+
 import json
 
 arquivo_entrada = 'bulk_data.ndjson'
